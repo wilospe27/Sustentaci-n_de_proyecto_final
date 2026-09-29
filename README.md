@@ -66,6 +66,6 @@ Datos Reales/
 3. Los scripts `.py` (`funciones_inasistencia.py`, `funciones_modelado.py`, `prediccion_diaria.py`) contienen la lógica reutilizable que soporta los notebooks y el flujo de predicción en producción.
 4. Las carpetas `modelos/` y `salidas/` contienen los artefactos finales (modelo entrenado, configuración y resultados de ejemplo).
 
-## Autor
+## Autores
 
-Wilson Ospina Pérez — relacionamie@celsia.com
+Santiago Osorio Idárraga · Leslie Pérez · Wilson Ospina Pérez · Juliana Alarcón · Jonatan De La Ossa · Daniela Dominguez Castaño
