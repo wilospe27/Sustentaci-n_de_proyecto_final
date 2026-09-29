@@ -1,0 +1,52 @@
+﻿variable,tipo,tipo_analitico,grupo,descripcion
+cita_id,int64,numérica,Identificación,Identificador único de la cita
+id_paciente,object,categórica,Identificación,Identificador del paciente (no es variable del modelo)
+fecha_cita,datetime64[ns],fecha,Identificación,Fecha de la cita
+fecha_asig,datetime64[ns],fecha,Identificación,Fecha de asignación
+particion,object,categórica,Identificación,train (ene-may) / validacion (jun) / test (jul) / produccion_simulada (ago-sep)
+no_asiste,int64,binaria,Objetivo,1 = no asistió (sin atención en RIPS mismo día y servicio)
+lead_time,int64,numérica,Agendamiento,Días entre asignación y cita (>= 1)
+lead_time_cat,object,categórica,Agendamiento,Lead time en rangos
+franja_horaria,object,categórica,Agendamiento,Franja horaria
+turno_sin,float64,numérica,Agendamiento,Hora cíclica (seno)
+turno_cos,float64,numérica,Agendamiento,Hora cíclica (coseno)
+es_control,int64,binaria,Agendamiento,"1 = control, 0 = primera vez"
+servicio_homologado,object,categórica,Agendamiento,Servicio real: especialidad + procedimiento agendado (une la codificación vieja y la nueva)
+familia_servicio,object,categórica,Agendamiento,Familia de servicio
+edad,int64,numérica,Sociodemográfica,Edad en años
+grupo_edad,object,categórica,Sociodemográfica,Curso de vida (Res. 3280/2018)
+sexo,object,categórica,Sociodemográfica,Sexo
+nivel_usr,int64,numérica,Sociodemográfica,Nivel del usuario
+tipo_usuario,object,categórica,Sociodemográfica,Cotizante / beneficiario
+regimen,object,categórica,Sociodemográfica,Contributivo / subsidiado
+sede,object,categórica,Sociodemográfica,Sede normalizada
+dia_semana,object,categórica,Calendario,Día de la semana
+semana_mes,int64,numérica,Calendario,Semana del mes
+es_festivo,int64,binaria,Calendario,Día festivo
+es_dia_previo_festivo,int64,binaria,Calendario,Día anterior a festivo
+es_dia_posterior_festivo,int64,binaria,Calendario,Día posterior a festivo
+es_puente_festivo,int64,binaria,Calendario,Puente festivo
+dias_hasta_festivo,float64,numérica,Calendario,Días hasta el próximo festivo
+es_primer_dia_habil_mes,int64,binaria,Calendario,Primer día hábil del mes
+n_citas_previas,int64,numérica,Historial,Citas previas (hasta D-2)
+n_inasistidas_previas,int64,numérica,Historial,Citas previas no asistidas
+tasa_inasistencia_suavizada,float64,numérica,Historial,Tasa suavizada hacia el promedio de train
+estado_ultima_cita,object,categórica,Historial,Resultado del último día con citas
+dias_desde_ultima_cita,float64,numérica,Historial,Días desde la última cita conocida
+sin_historial,int64,binaria,Historial,1 = sin citas previas
+programa_rcv,object,categórica,Clínica,Programa RCV
+diabetes,int64,binaria,Clínica,Diabetes según RCV
+gestante_activa,int64,binaria,Clínica,Gestante en la fecha de la cita
+n_medicamentos_90d,int64,numérica,Clínica,Medicamentos distintos en 90 días previos
+n_diagnosticos_previos,int64,numérica,Clínica,Diagnósticos CIE-10 distintos previos
+n_atenciones_90d,int64,numérica,Clínica,Días con atención en 90 días previos
+n_citas_previas_esp,int64,numérica,Historial v2,Citas previas en la misma especialidad
+n_inasistidas_previas_esp,int64,numérica,Historial v2,Inasistencias previas en la misma especialidad
+tasa_inasistencia_suavizada_esp,float64,numérica,Historial v2,Tasa suavizada en la misma especialidad
+estado_ultima_cita_esp,object,categórica,Historial v2,Resultado de la última cita en la especialidad
+dias_desde_ultima_cita_esp,float64,numérica,Historial v2,Días desde la última cita en la especialidad
+n_otras_citas_mismo_dia,int64,numérica,Carga agenda v2,Otras citas del paciente el mismo día
+n_citas_proximos_7d,int64,numérica,Carga agenda v2,Citas del paciente en los 7 días siguientes
+n_citas_ultimos_7d,int64,numérica,Carga agenda v2,Citas del paciente en los 7 días anteriores
+familia_x_lead,object,categórica,Interacciones v2,Familia de servicio × rango de lead time
+edad_x_control,object,categórica,Interacciones v2,Curso de vida × tipo de cita

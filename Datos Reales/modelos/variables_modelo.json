@@ -1,0 +1,75 @@
+{
+  "variables": [
+    "lead_time",
+    "lead_time_cat",
+    "franja_horaria",
+    "turno_sin",
+    "turno_cos",
+    "es_control",
+    "servicio_homologado",
+    "familia_servicio",
+    "edad",
+    "grupo_edad",
+    "sexo",
+    "nivel_usr",
+    "tipo_usuario",
+    "regimen",
+    "sede",
+    "dia_semana",
+    "semana_mes",
+    "es_festivo",
+    "es_dia_previo_festivo",
+    "es_dia_posterior_festivo",
+    "es_puente_festivo",
+    "dias_hasta_festivo",
+    "es_primer_dia_habil_mes",
+    "n_citas_previas",
+    "n_inasistidas_previas",
+    "tasa_inasistencia_suavizada",
+    "estado_ultima_cita",
+    "dias_desde_ultima_cita",
+    "sin_historial",
+    "programa_rcv",
+    "diabetes",
+    "gestante_activa",
+    "n_medicamentos_90d",
+    "n_diagnosticos_previos",
+    "n_atenciones_90d",
+    "n_citas_previas_esp",
+    "n_inasistidas_previas_esp",
+    "tasa_inasistencia_suavizada_esp",
+    "estado_ultima_cita_esp",
+    "dias_desde_ultima_cita_esp",
+    "n_otras_citas_mismo_dia",
+    "n_citas_proximos_7d",
+    "n_citas_ultimos_7d",
+    "familia_x_lead",
+    "edad_x_control"
+  ],
+  "decisiones_bloques": [
+    {
+      "bloque": "historial_especialidad",
+      "mejora_HGB": 0.0025,
+      "mejora_logistica": 0.0003,
+      "decision": "ENTRA"
+    },
+    {
+      "bloque": "reprogramaciones",
+      "mejora_HGB": -0.0004,
+      "mejora_logistica": 0.0002,
+      "decision": "no entra"
+    },
+    {
+      "bloque": "carga_agenda",
+      "mejora_HGB": 0.0054,
+      "mejora_logistica": 0.0011,
+      "decision": "ENTRA"
+    },
+    {
+      "bloque": "interacciones",
+      "mejora_HGB": -0.0007,
+      "mejora_logistica": 0.0027,
+      "decision": "ENTRA"
+    }
+  ]
+}

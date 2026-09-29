@@ -1,0 +1,65 @@
+﻿variable,grupo,descripcion
+cita_id,Identificación,Identificador único de la cita
+id_paciente,Identificación,Identificador del paciente (no es variable del modelo)
+fecha_cita,Identificación,Fecha de la cita
+fecha_asig,Identificación,Fecha de asignación
+particion,Identificación,train (ene-may) / validacion (jun) / test (jul) / produccion_simulada (ago-sep)
+no_asiste,Objetivo,1 = no asistió (sin atención en RIPS mismo día y servicio)
+lead_time,Agendamiento,Días entre asignación y cita (>= 1)
+lead_time_cat,Agendamiento,Lead time en rangos
+hora_cita,Agendamiento,Hora de la cita
+franja_horaria,Agendamiento,Franja horaria
+turno_sin,Agendamiento,Hora cíclica (seno)
+turno_cos,Agendamiento,Hora cíclica (coseno)
+es_control,Agendamiento,"1 = control, 0 = primera vez"
+servicio_homologado,Agendamiento,Servicio real: especialidad + procedimiento agendado (une la codificación vieja y la nueva)
+especialidad,Agendamiento,Especialidad tal como viene en la agenda (no se usa en el modelo: cambió de codificación en abril)
+familia_servicio,Agendamiento,Familia de servicio
+es_pac,Agendamiento,1 = Plan de Atención Complementaria
+edad,Sociodemográfica,Edad en años
+grupo_edad,Sociodemográfica,Curso de vida (Res. 3280/2018)
+sexo,Sociodemográfica,Sexo
+nivel_usr,Sociodemográfica,Nivel del usuario
+tipo_usuario,Sociodemográfica,Cotizante / beneficiario
+regimen,Sociodemográfica,Contributivo / subsidiado
+sede,Sociodemográfica,Sede normalizada
+municipio,Sociodemográfica,Municipio de la sede
+dia_semana_num,Calendario,Día de la semana (1-7)
+dia_semana,Calendario,Día de la semana
+mes,Calendario,Mes
+semana_mes,Calendario,Semana del mes
+es_festivo,Calendario,Día festivo
+es_dia_previo_festivo,Calendario,Día anterior a festivo
+es_dia_posterior_festivo,Calendario,Día posterior a festivo
+es_puente_festivo,Calendario,Puente festivo
+dias_hasta_festivo,Calendario,Días hasta el próximo festivo
+es_primer_dia_habil_mes,Calendario,Primer día hábil del mes
+es_ultimo_dia_habil_mes,Calendario,Último día hábil del mes
+n_citas_previas,Historial,Citas previas (hasta D-2)
+n_asistidas_previas,Historial,Citas previas asistidas
+n_inasistidas_previas,Historial,Citas previas no asistidas
+tasa_inasistencia_hist,Historial,Inasistidas / previas (vacío sin historial)
+tasa_inasistencia_suavizada,Historial,Tasa suavizada hacia el promedio de train
+estado_ultima_cita,Historial,Resultado del último día con citas
+dias_desde_ultima_cita,Historial,Días desde la última cita conocida
+sin_historial,Historial,1 = sin citas previas
+es_cronico,Clínica,Pertenece a programa RCV
+programa_rcv,Clínica,Programa RCV
+diabetes,Clínica,Diabetes según RCV
+gestante_activa,Clínica,Gestante en la fecha de la cita
+n_medicamentos_90d,Clínica,Medicamentos distintos en 90 días previos
+polifarmacia,Clínica,n_medicamentos_90d >= 5
+n_diagnosticos_previos,Clínica,Diagnósticos CIE-10 distintos previos
+n_atenciones_90d,Clínica,Días con atención en 90 días previos
+n_citas_previas_esp,Historial v2,Citas previas en la misma especialidad
+n_inasistidas_previas_esp,Historial v2,Inasistencias previas en la misma especialidad
+tasa_inasistencia_suavizada_esp,Historial v2,Tasa suavizada en la misma especialidad
+estado_ultima_cita_esp,Historial v2,Resultado de la última cita en la especialidad
+dias_desde_ultima_cita_esp,Historial v2,Días desde la última cita en la especialidad
+sin_historial_esp,Historial v2,1 = primera vez en esta especialidad
+n_reprogramaciones_previas,Reprogramaciones v2,Reprogramaciones/cancelaciones previas
+n_otras_citas_mismo_dia,Carga agenda v2,Otras citas del paciente el mismo día
+n_citas_proximos_7d,Carga agenda v2,Citas del paciente en los 7 días siguientes
+n_citas_ultimos_7d,Carga agenda v2,Citas del paciente en los 7 días anteriores
+familia_x_lead,Interacciones v2,Familia de servicio × rango de lead time
+edad_x_control,Interacciones v2,Curso de vida × tipo de cita

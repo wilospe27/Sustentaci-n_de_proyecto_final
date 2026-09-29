@@ -1,0 +1,74 @@
+{
+  "variables_v1": [
+    "lead_time",
+    "lead_time_cat",
+    "franja_horaria",
+    "turno_sin",
+    "turno_cos",
+    "es_control",
+    "servicio_homologado",
+    "familia_servicio",
+    "edad",
+    "grupo_edad",
+    "sexo",
+    "nivel_usr",
+    "tipo_usuario",
+    "regimen",
+    "sede",
+    "dia_semana",
+    "semana_mes",
+    "es_festivo",
+    "es_dia_previo_festivo",
+    "es_dia_posterior_festivo",
+    "es_puente_festivo",
+    "dias_hasta_festivo",
+    "es_primer_dia_habil_mes",
+    "n_citas_previas",
+    "n_inasistidas_previas",
+    "tasa_inasistencia_suavizada",
+    "estado_ultima_cita",
+    "dias_desde_ultima_cita",
+    "sin_historial",
+    "programa_rcv",
+    "diabetes",
+    "gestante_activa",
+    "n_medicamentos_90d",
+    "n_diagnosticos_previos",
+    "n_atenciones_90d"
+  ],
+  "bloques_v2": {
+    "historial_especialidad": [
+      "n_citas_previas_esp",
+      "n_inasistidas_previas_esp",
+      "tasa_inasistencia_suavizada_esp",
+      "estado_ultima_cita_esp",
+      "dias_desde_ultima_cita_esp"
+    ],
+    "reprogramaciones": [
+      "n_reprogramaciones_previas"
+    ],
+    "carga_agenda": [
+      "n_otras_citas_mismo_dia",
+      "n_citas_proximos_7d",
+      "n_citas_ultimos_7d"
+    ],
+    "interacciones": [
+      "familia_x_lead",
+      "edad_x_control"
+    ]
+  },
+  "eliminadas_eda": [
+    "hora_cita",
+    "dia_semana_num",
+    "n_asistidas_previas",
+    "tasa_inasistencia_hist",
+    "polifarmacia",
+    "es_cronico",
+    "municipio",
+    "mes",
+    "es_pac",
+    "es_ultimo_dia_habil_mes",
+    "especialidad",
+    "sin_historial_esp"
+  ]
+}

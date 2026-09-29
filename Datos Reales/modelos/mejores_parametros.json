@@ -1,0 +1,31 @@
+{
+  "logistica": {
+    "C": 0.6796578090758152,
+    "class_weight": "balanced"
+  },
+  "random_forest": {
+    "n_estimators": 300,
+    "min_samples_leaf": 20,
+    "max_samples": 0.3,
+    "max_features": 0.5,
+    "max_depth": null
+  },
+  "hist_gradient_boosting": {
+    "l2_regularization": 0.4013783023846251,
+    "learning_rate": 0.02240750919334817,
+    "max_features": 0.8,
+    "max_iter": 535,
+    "max_leaf_nodes": 35,
+    "min_samples_leaf": 180
+  },
+  "lightgbm": {
+    "colsample_bytree": 0.7117007403531848,
+    "learning_rate": 0.04431752678446183,
+    "min_child_samples": 155,
+    "n_estimators": 621,
+    "num_leaves": 25,
+    "reg_lambda": 0.006242659053860567,
+    "subsample": 0.88453678109946,
+    "subsample_freq": 1
+  }
+}

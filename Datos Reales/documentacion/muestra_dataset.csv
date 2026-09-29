@@ -1,0 +1,11 @@
+﻿id_paciente,fecha_cita,servicio_homologado,lead_time,edad,sexo,tipo_usuario,sede,dia_semana,programa_rcv,n_citas_previas,tasa_inasistencia_suavizada,estado_ultima_cita,no_asiste
+****28,2026-01-13,NUTRICIONISTA,3,39,Femenino,COTIZANTE,LAURELES,Martes,Sin programa,1,0.24,Asistió,0
+****14,2026-01-29,PEDIATRIA,7,0,Femenino,BENEFICIARIO,LAURELES,Jueves,Sin programa,2,0.592,No asistió,0
+****87,2026-02-25,MEDICINA GENERAL,7,45,Masculino,COTIZANTE,ARMENIA,Miércoles,Programa de Hipertension,3,0.327,No asistió,0
+****18,2026-03-30,MEDICINA GENERAL,14,35,Femenino,COTIZANTE,LAURELES,Lunes,Sin programa,0,0.32,Sin historial,0
+****64,2026-03-10,MEDICINA GENERAL,4,53,Masculino,BENEFICIARIO,CENTRO,Martes,Sin programa,1,0.49,No asistió,0
+****00,2026-05-26,MEDICINA GENERAL,5,42,Masculino,BENEFICIARIO,CENTRO,Martes,Sin programa,10,0.305,Asistió,1
+****27,2026-03-19,PYP CURSO DE VIDA - MEDICO,7,8,Femenino,BENEFICIARIO,CENTRO,Jueves,Sin programa,3,0.327,No asistió,1
+****18,2026-01-30,MEDICINA GENERAL,2,49,Masculino,COTIZANTE,CENTRO,Viernes,Sin programa,0,0.32,Sin historial,1
+****27,2026-03-20,ODONTOLOGIA,9,40,Femenino,COTIZANTE,ARMENIA,Viernes,Programa de Hipertension,5,0.62,No asistió,1
+****46,2026-01-21,CRONICOS - MEDICO,92,80,Masculino,COTIZANTE,LAURELES,Miércoles,Programa de Hipertension,0,0.32,Sin historial,1
